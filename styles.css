@@ -717,8 +717,26 @@ a.btn {
 .feature-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.15), rgba(247, 147, 30, 0.1));
+    border-radius: 15px;
+    border: 2px solid rgba(255, 140, 66, 0.3);
+    color: #ff8c42;
     animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.1);
+}
+
+.feature-card:hover .feature-icon {
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.25), rgba(247, 147, 30, 0.2));
+    border-color: #ff8c42;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 140, 66, 0.2);
+    color: #f7931e;
 }
 
 .feature-card:nth-child(2) .feature-icon {
