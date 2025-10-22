@@ -1,0 +1,463 @@
+/* ========================================
+   Shop Page Specific Styles
+   ======================================== */
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ========================================
+   Shop Header
+   ======================================== */
+
+.shop-header {
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(135deg, #ff8c42 0%, #f7931e 50%, #ff6b35 100%);
+    text-align: center;
+    position: relative;
+    margin-top: 80px;
+    z-index: 1;
+    width: 100%;
+}
+
+.shop-header::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: -200px;
+    left: -200px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shop-header::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: -200px;
+    right: -200px;
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.shop-header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.shop-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.shop-header p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0.5rem;
+}
+
+.shop-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ========================================
+   Shop Section
+   ======================================== */
+
+.shop-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, #0d0d0a 0%, #16213e 100%);
+    min-height: auto;
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    display: block;
+}
+
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: visible;
+}
+
+/* ========================================
+   Shop Category
+   ======================================== */
+
+.shop-category {
+    margin-bottom: 5rem;
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.category-header h2 {
+    font-size: 2.5rem;
+    color: #ff8c42;
+    margin-bottom: 0.5rem;
+}
+
+.category-description {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+}
+
+/* ========================================
+   Products Grid
+   ======================================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.shop-category:first-of-type .products-grid {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.donations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 100%;
+}
+
+/* ========================================
+   Product Card
+   ======================================== */
+
+.product-card {
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 2px solid #2a3050;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff8c42;
+    box-shadow: 0 20px 50px rgba(255, 140, 66, 0.3);
+}
+
+.product-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #ff8c42, #f7931e);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-icon {
+    transform: scale(1.1);
+}
+
+.product-card h3 {
+    font-size: 1.8rem;
+    color: #ff8c42;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.product-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff8c42;
+    margin-bottom: 1rem;
+}
+
+.robux {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.product-description {
+    color: #b0b0b0;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.product-description p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ========================================
+   Premium Card
+   ======================================== */
+
+.premium-card {
+    border: 2px solid #ff8c42;
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.05), rgba(247, 147, 30, 0.05)), 
+                linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+    box-shadow: 0 0 30px rgba(255, 140, 66, 0.2);
+}
+
+.premium-card:hover {
+    box-shadow: 0 20px 60px rgba(255, 140, 66, 0.4);
+}
+
+.perks-list {
+    background: rgba(255, 140, 66, 0.08);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.perks-list h4 {
+    color: #ff8c42;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.perks-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.perks-list li {
+    color: #b0b0b0;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 140, 66, 0.1);
+    transition: all 0.3s ease;
+}
+
+.perks-list li:last-child {
+    border-bottom: none;
+}
+
+.perks-list li:hover {
+    color: #ff8c42;
+    padding-left: 0.5rem;
+}
+
+/* ========================================
+   Donation Card
+   ======================================== */
+
+.donation-card {
+    border: 2px solid #2a3050;
+}
+
+.donation-card:hover {
+    box-shadow: 0 20px 50px rgba(255, 140, 66, 0.2);
+}
+
+.donation-message {
+    color: #ff8c42;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   Buy Button
+   ======================================== */
+
+.btn-buy {
+    margin-top: auto;
+    width: 100%;
+    text-decoration: none !important;
+}
+
+/* ========================================
+   Shop Info Section
+   ======================================== */
+
+.shop-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 6rem;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid #2a3050;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.info-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.info-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff8c42;
+    box-shadow: 0 15px 40px rgba(255, 140, 66, 0.2);
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.info-card h3 {
+    font-size: 1.4rem;
+    color: #ff8c42;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: #b0b0b0;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+    .shop-header {
+        padding: 6rem 2rem 3rem;
+        margin-top: 70px;
+    }
+
+    .shop-header h1 {
+        font-size: 2rem;
+    }
+
+    .shop-header p {
+        font-size: 1rem;
+    }
+
+    .category-header h2 {
+        font-size: 2rem;
+    }
+
+    .products-grid,
+    .donations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        padding: 2rem;
+    }
+
+    .product-icon {
+        font-size: 3rem;
+    }
+
+    .product-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-price {
+        font-size: 2rem;
+    }
+
+    .perks-list {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-header {
+        padding: 5rem 1rem 2rem;
+    }
+
+    .shop-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .shop-section {
+        padding: 3rem 1rem;
+    }
+
+    .category-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-card {
+        padding: 1.5rem;
+    }
+
+    .product-icon {
+        font-size: 2.5rem;
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .product-price {
+        font-size: 1.5rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .info-icon {
+        font-size: 2rem;
+    }
+}

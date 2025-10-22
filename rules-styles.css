@@ -1,0 +1,473 @@
+/* ========================================
+   Rules Page Specific Styles
+   ======================================== */
+
+.rules-header {
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(135deg, #ff8c42 0%, #f7931e 50%, #ff6b35 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.rules-header::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.rules-header::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: -150px;
+    right: -150px;
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.rules-header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.rules-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rules-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+}
+
+/* ========================================
+   Rules Section
+   ======================================== */
+
+.rules-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, #0d0d0a 0%, #16213e 100%);
+    min-height: 100vh;
+}
+
+.rules-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   Table of Contents
+   ======================================== */
+
+.table-of-contents {
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid #ff8c42;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.8s ease-out;
+    position: sticky;
+    top: 100px;
+    z-index: 100;
+}
+
+.table-of-contents h3 {
+    font-size: 1.2rem;
+    color: #ff8c42;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.table-of-contents h3::before {
+    content: '📋';
+    font-size: 1rem;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.6rem;
+}
+
+.table-of-contents li {
+    margin: 0;
+}
+
+.table-of-contents a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: var(--transition);
+    display: block;
+    font-size: 0.9rem;
+}
+
+.table-of-contents a:hover {
+    background: rgba(255, 140, 66, 0.1);
+    color: #ff8c42;
+    transform: translateX(5px);
+}
+
+/* ========================================
+   Rule Cards
+   ======================================== */
+
+.rule-card {
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+    transition: var(--transition);
+    scroll-margin-top: 120px;
+}
+
+.rule-card:hover {
+    border-color: #ff8c42;
+    box-shadow: 0 15px 40px rgba(255, 140, 66, 0.15);
+    transform: translateY(-5px);
+}
+
+.rule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #ff8c42;
+}
+
+.rule-header h2 {
+    font-size: 2rem;
+    color: #ff8c42;
+    margin: 0;
+}
+
+.rule-number {
+    background: linear-gradient(135deg, #ff8c42, #f7931e);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.rule-content {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.rule-item {
+    background: rgba(255, 140, 66, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #ff8c42;
+    transition: var(--transition);
+}
+
+.rule-item:hover {
+    background: rgba(255, 140, 66, 0.1);
+    transform: translateX(5px);
+}
+
+.rule-item h3 {
+    font-size: 1.2rem;
+    color: #f7931e;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+}
+
+.rule-item p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.safe-zones-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+    color: var(--text-secondary);
+    background: rgba(255, 140, 66, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+.safe-zones-list li {
+    padding: 0.8rem 0 0.8rem 2.5rem;
+    position: relative;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(255, 140, 66, 0.1);
+    transition: all 0.3s ease;
+}
+
+.safe-zones-list li:last-child {
+    border-bottom: none;
+}
+
+.safe-zones-list li:hover {
+    background: rgba(255, 140, 66, 0.08);
+    padding-left: 2.8rem;
+    color: #ff8c42;
+}
+
+.safe-zones-list li::before {
+    content: '�';
+    position: absolute;
+    left: 0.5rem;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.safe-zones-list li:hover::before {
+    transform: scale(1.2);
+}
+
+/* ========================================
+   Consequences Section
+   ======================================== */
+
+.consequence-item {
+    margin-bottom: 1.5rem;
+}
+
+.consequence-level {
+    background: rgba(255, 140, 66, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #ff8c42;
+    transition: var(--transition);
+}
+
+.consequence-level:hover {
+    background: rgba(255, 140, 66, 0.1);
+    transform: translateX(5px);
+}
+
+.consequence-level h3 {
+    font-size: 1.2rem;
+    color: #f7931e;
+    margin: 0 0 0.8rem 0;
+}
+
+.consequence-level p {
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.consequence-level.warning {
+    border-left-color: #ffc107;
+}
+
+.consequence-level.caution {
+    border-left-color: #ff6b35;
+}
+
+.consequence-level.ban {
+    border-left-color: #ff4444;
+}
+
+.consequence-level.permanent {
+    border-left-color: #cc0000;
+}
+
+/* ========================================
+   Appeal Card
+   ======================================== */
+
+.appeal-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #6a4c93;
+}
+
+.appeal-card .rule-header {
+    border-bottom-color: #6a4c93;
+}
+
+.appeal-card .rule-header h2 {
+    color: #6a4c93;
+}
+
+.appeal-card .rule-number {
+    background: linear-gradient(135deg, #6a4c93, #8b6ec4);
+}
+
+.appeal-steps {
+    color: var(--text-secondary);
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+    line-height: 1.8;
+}
+
+.appeal-steps li {
+    margin-bottom: 0.8rem;
+}
+
+.appeal-note {
+    background: rgba(106, 76, 147, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #6a4c93;
+    color: var(--text-secondary);
+    margin-top: 1.5rem;
+}
+
+/* ========================================
+   Acknowledgment Box
+   ======================================== */
+
+.acknowledgment-box {
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid #ff8c42;
+    text-align: center;
+    margin-top: 4rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.acknowledgment-box h3 {
+    font-size: 2rem;
+    color: #ff8c42;
+    margin-bottom: 1.5rem;
+}
+
+.acknowledgment-box p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* ========================================
+   Responsive Design for Rules Page
+   ======================================== */
+
+@media (max-width: 768px) {
+    .rules-header {
+        padding: 6rem 2rem 3rem;
+        margin-top: 70px;
+    }
+
+    .rules-header h1 {
+        font-size: 2rem;
+    }
+
+    .rules-header p {
+        font-size: 0.95rem;
+    }
+
+    .table-of-contents {
+        position: relative;
+        top: auto;
+        margin-bottom: 2rem;
+    }
+
+    .table-of-contents ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rule-card {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .rule-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .rule-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .rule-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .acknowledgment-box {
+        padding: 2rem;
+    }
+
+    .acknowledgment-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .rules-header {
+        padding: 5rem 1rem 2rem;
+    }
+
+    .rules-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .rules-section {
+        padding: 3rem 1rem;
+    }
+
+    .rule-card {
+        padding: 1.5rem;
+    }
+
+    .rule-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .rule-item {
+        padding: 1rem;
+    }
+
+    .rule-item h3 {
+        font-size: 1rem;
+    }
+}
