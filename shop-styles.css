@@ -1396,7 +1396,7 @@
     }
 
     .shop-header-content {
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1.2rem;
     }
 
     .hero-badge-shop {
@@ -1420,7 +1420,7 @@
     .shop-subtitle {
         font-size: 0.95rem;
         margin-bottom: 1.5rem;
-        padding: 1rem 1.2rem;
+        padding: 1rem 1rem;
     }
 
     .shop-header-divider {
@@ -1436,15 +1436,21 @@
     }
 
     .shop-section {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
     }
 
     .category-header {
-        margin-bottom: 2rem;
+        margin-bottom: 1.8rem;
     }
 
     .category-header h2 {
         font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .category-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
     }
 
     .category-header h2::after {
@@ -1464,10 +1470,27 @@
         padding: 1.5rem;
     }
 
+    .premium-card {
+        padding: 5rem 1.5rem 1.5rem 1.5rem;
+        overflow: hidden;
+    }
+
     .product-icon,
     .ad-card .product-icon {
         font-size: 2.5rem;
         margin-bottom: 0.8rem;
+        width: auto;
+        height: auto;
+    }
+
+    .premium-icon {
+        font-size: 2.5rem !important;
+        animation: none !important;
+    }
+
+    .premium-icon i {
+        animation: none !important;
+        transform: none !important;
     }
 
     .product-card h3,
@@ -1549,10 +1572,17 @@
 
     .shop-header-subtitle {
         font-size: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .shop-subtitle {
         font-size: 0.85rem;
+        margin-bottom: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .shop-header-divider {
+        width: 60px;
     }
 
     .moon-shop {
@@ -1566,8 +1596,18 @@
         padding: 2rem 0.8rem;
     }
 
+    .category-header {
+        margin-bottom: 1.5rem;
+    }
+
     .category-header h2 {
         font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .category-description {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
     }
 
     .products-grid,
@@ -1582,21 +1622,39 @@
         padding: 1.2rem 0.8rem;
     }
 
+    .premium-card {
+        padding: 4.5rem 0.8rem 0.8rem 0.8rem;
+        overflow: hidden;
+    }
+
     .product-icon,
     .ad-card .product-icon {
         font-size: 2rem;
         width: 60px;
         height: 60px;
+        margin-bottom: 0.8rem;
+    }
+
+    .premium-icon {
+        font-size: 2rem !important;
+        animation: none !important;
+    }
+
+    .premium-icon i {
+        animation: none !important;
+        transform: none !important;
     }
 
     .product-card h3,
     .ad-card h3 {
         font-size: 1.1rem;
+        margin-bottom: 0.5rem;
     }
 
     .product-price,
     .ad-card .product-price {
         font-size: 1.3rem;
+        margin-bottom: 0.8rem;
     }
 
     .premium-icon i {
@@ -1605,6 +1663,7 @@
 
     .perks-list {
         padding: 0.8rem;
+        margin-bottom: 0.8rem;
     }
 
     .perks-list h4 {
