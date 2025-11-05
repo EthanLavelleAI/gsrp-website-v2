@@ -1345,7 +1345,8 @@
     }
 
     .products-grid,
-    .donations-grid {
+    .donations-grid,
+    .ads-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
@@ -1446,25 +1447,30 @@
     }
 
     .products-grid,
-    .donations-grid {
+    .donations-grid,
+    .ads-grid {
         grid-template-columns: 1fr;
         gap: 1.2rem;
     }
 
-    .product-card {
+    .product-card,
+    .ad-card {
         padding: 1.5rem;
     }
 
-    .product-icon {
+    .product-icon,
+    .ad-card .product-icon {
         font-size: 2.5rem;
         margin-bottom: 0.8rem;
     }
 
-    .product-card h3 {
+    .product-card h3,
+    .ad-card h3 {
         font-size: 1.2rem;
     }
 
-    .product-price {
+    .product-price,
+    .ad-card .product-price {
         font-size: 1.5rem;
     }
 
@@ -1506,5 +1512,159 @@
     .shop-info {
         margin-top: 3rem;
         gap: 1rem;
+    }
+}
+
+/* ========================================
+   Ultra Mobile (320px - 479px)
+   ======================================== */
+
+@media (max-width: 320px) {
+    .shop-header {
+        min-height: 100vh;
+        padding-top: 80px;
+        padding: 4rem 0.8rem 2rem;
+    }
+
+    .shop-header-content {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .hero-badge-shop {
+        font-size: 0.7rem;
+        padding: 0.3rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .shop-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .shop-header-subtitle {
+        font-size: 1rem;
+    }
+
+    .shop-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .moon-shop {
+        width: 50px;
+        height: 50px;
+        top: 8%;
+        right: 5%;
+    }
+
+    .shop-section {
+        padding: 2rem 0.8rem;
+    }
+
+    .category-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .products-grid,
+    .donations-grid,
+    .ads-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .product-card,
+    .ad-card {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .product-icon,
+    .ad-card .product-icon {
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    .product-card h3,
+    .ad-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .product-price,
+    .ad-card .product-price {
+        font-size: 1.3rem;
+    }
+
+    .premium-icon i {
+        font-size: 3rem;
+    }
+
+    .perks-list {
+        padding: 0.8rem;
+    }
+
+    .perks-list h4 {
+        font-size: 0.9rem;
+    }
+
+    .perks-list li {
+        font-size: 0.8rem;
+        padding: 0.3rem 0;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   Large Desktop (1200px+)
+   ======================================== */
+
+@media (min-width: 1200px) {
+    .shop-header {
+        min-height: 100vh;
+        padding-top: 200px;
+    }
+
+    .shop-header h1 {
+        font-size: 5rem;
+    }
+
+    .shop-header-subtitle {
+        font-size: 2rem;
+    }
+
+    .category-header h2 {
+        font-size: 3rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .donations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ads-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .premium-card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .product-icon {
+        font-size: 4rem;
+    }
+
+    .moon-shop {
+        width: 120px;
+        height: 120px;
     }
 }

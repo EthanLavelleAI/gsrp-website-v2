@@ -819,3 +819,124 @@
         font-size: 1rem;
     }
 }
+
+/* ========================================
+   Ultra Mobile (320px - 479px)
+   ======================================== */
+
+@media (max-width: 320px) {
+    .rules-header {
+        min-height: 100vh;
+        padding-top: 80px;
+        padding: 4rem 0.8rem 2rem;
+    }
+
+    .rules-header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .rules-header p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .table-of-contents {
+        padding: 1.5rem 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .table-of-contents h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .table-of-contents ul {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .table-of-contents a {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .rules-section {
+        padding: 2rem 0.8rem;
+    }
+
+    .rule-card {
+        padding: 1.2rem 0.8rem;
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+    }
+
+    .rule-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .rule-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .rule-item h3 {
+        font-size: 0.95rem;
+    }
+
+    .rule-item p {
+        font-size: 0.85rem;
+    }
+
+    .consequence-level {
+        padding: 1.2rem 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .acknowledgment-box {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .acknowledgment-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .button-group .btn {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   Large Desktop (1200px+)
+   ======================================== */
+
+@media (min-width: 1200px) {
+    .rules-header {
+        min-height: 100vh;
+        padding-top: 200px;
+    }
+
+    .rules-header h1 {
+        font-size: 4rem;
+    }
+
+    .table-of-contents ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .rules-section {
+        padding: 8rem 4rem;
+    }
+
+    .rule-card {
+        padding: 3rem;
+    }
+}
