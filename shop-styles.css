@@ -345,8 +345,10 @@
 }
 
 .shop-category:first-of-type .products-grid {
-    max-width: 500px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .donations-grid {
@@ -659,6 +661,10 @@
     position: relative;
     overflow: visible;
     transform: scale(1.02);
+    padding: 4rem 3rem;
+    min-height: auto;
+    width: 90%;
+    max-width: none;
 }
 
 .premium-card::before {
