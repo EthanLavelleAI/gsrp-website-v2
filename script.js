@@ -338,51 +338,51 @@ if ('IntersectionObserver' in window) {
 }
 
 // ========================================
-// Theme Toggle (Optional Light/Dark Mode)
+// Theme Toggle (Optional Light/Dark Mode) - DISABLED
 // ========================================
 
-const createThemeToggle = () => {
-    const toggle = document.createElement('button');
-    toggle.id = 'theme-toggle';
-    toggle.innerHTML = '🌙';
-    toggle.style.cssText = `
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: none;
-        background: linear-gradient(135deg, #0066cc, #ff6b6b);
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        z-index: 999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 5px 20px rgba(0, 102, 204, 0.3);
-        transition: all 0.3s ease;
-    `;
-
-    toggle.addEventListener('mouseenter', () => {
-        toggle.style.transform = 'scale(1.1)';
-        toggle.style.boxShadow = '0 8px 30px rgba(0, 102, 204, 0.5)';
-    });
-
-    toggle.addEventListener('mouseleave', () => {
-        toggle.style.transform = 'scale(1)';
-        toggle.style.boxShadow = '0 5px 20px rgba(0, 102, 204, 0.3)';
-    });
-
-    toggle.addEventListener('click', () => {
-        console.log('Theme toggle clicked - ready for implementation');
-    });
-
-    document.body.appendChild(toggle);
-};
-
-createThemeToggle();
+// const createThemeToggle = () => {
+//     const toggle = document.createElement('button');
+//     toggle.id = 'theme-toggle';
+//     toggle.innerHTML = '🌙';
+//     toggle.style.cssText = `
+//         position: fixed;
+//         bottom: 2rem;
+//         right: 2rem;
+//         width: 50px;
+//         height: 50px;
+//         border-radius: 50%;
+//         border: none;
+//         background: linear-gradient(135deg, #0066cc, #ff6b6b);
+//         color: white;
+//         font-size: 1.5rem;
+//         cursor: pointer;
+//         z-index: 999;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         box-shadow: 0 5px 20px rgba(0, 102, 204, 0.3);
+//         transition: all 0.3s ease;
+//     `;
+//
+//     toggle.addEventListener('mouseenter', () => {
+//         toggle.style.transform = 'scale(1.1)';
+//         toggle.style.boxShadow = '0 8px 30px rgba(0, 102, 204, 0.5)';
+//     });
+//
+//     toggle.addEventListener('mouseleave', () => {
+//         toggle.style.transform = 'scale(1)';
+//         toggle.style.boxShadow = '0 5px 20px rgba(0, 102, 204, 0.3)';
+//     });
+//
+//     toggle.addEventListener('click', () => {
+//         console.log('Theme toggle clicked - ready for implementation');
+//     });
+//
+//     document.body.appendChild(toggle);
+// };
+//
+// createThemeToggle();
 
 // ========================================
 // Console Welcome Message
