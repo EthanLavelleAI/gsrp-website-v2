@@ -236,6 +236,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    width: 100%;
 }
 
 .ad-card {
@@ -249,12 +250,21 @@
     padding: 44px 32px;
     transition: var(--transition);
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .ad-card:hover {
     background: var(--bg-card-hover);
     border-color: var(--border-hover);
     transform: translateY(-2px);
+}
+
+.ad-card:visited,
+.ad-card:focus,
+.ad-card:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 .ad-ping {
