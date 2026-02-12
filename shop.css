@@ -240,31 +240,34 @@
 }
 
 .ad-card {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
     border-radius: var(--radius);
     padding: 44px 32px;
     transition: var(--transition);
     cursor: pointer;
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 .ad-card:hover {
-    background: var(--bg-card-hover);
-    border-color: var(--border-hover);
+    background: var(--bg-card-hover) !important;
+    border-color: var(--border-hover) !important;
     transform: translateY(-2px);
 }
 
+.ad-card:link,
 .ad-card:visited,
 .ad-card:focus,
 .ad-card:active {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
 }
 
 .ad-ping {
