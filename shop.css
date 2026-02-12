@@ -1,0 +1,352 @@
+/* ===== Shop Page Styles ===== */
+
+.shop-hero {
+    position: relative;
+    padding: 160px 0 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.shop-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 50% at 20% 100%, rgba(59, 130, 246, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.shop-hero .section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.shop-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.shop-section-alt {
+    background: var(--bg-secondary);
+}
+
+.shop-category-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.shop-category-title svg {
+    width: 22px;
+    height: 22px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.shop-category-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+/* Nav active state */
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+    background: var(--accent);
+}
+
+/* ===== Premium Card ===== */
+.premium-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 56px;
+    margin-top: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.premium-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.premium-info {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+}
+
+.premium-badge {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 8px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.premium-info h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.premium-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 28px;
+    margin-top: 24px;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.price-currency {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.perks-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 36px;
+}
+
+.perks-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.perks-list li svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.premium-visual {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.premium-logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 60px rgba(59, 130, 246, 0.12));
+}
+
+/* ===== Donate Grid ===== */
+.donate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.donate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 24px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.donate-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.donate-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.donate-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+.donate-action {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 8px 24px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.donate-card:hover .donate-action {
+    background: var(--accent);
+    color: #0a0a0a;
+}
+
+/* ===== Ad Grid ===== */
+.ad-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.ad-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 44px 32px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.ad-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.ad-ping {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.ad-ping.everyone {
+    background: rgba(239, 68, 68, 0.12);
+    color: #f87171;
+}
+
+.ad-ping.here {
+    background: rgba(250, 204, 21, 0.12);
+    color: #fbbf24;
+}
+
+.ad-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 280px;
+}
+
+.ad-price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 24px;
+}
+
+.ad-price .price-amount {
+    font-size: 2rem;
+}
+
+.ad-card .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .premium-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 28px;
+    }
+
+    .premium-info {
+        max-width: 100%;
+    }
+
+    .premium-price {
+        justify-content: center;
+    }
+
+    .perks-list li {
+        justify-content: center;
+    }
+
+    .premium-visual {
+        margin-top: 32px;
+    }
+
+    .premium-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .donate-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ad-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-category-title {
+        justify-content: center;
+    }
+
+    .shop-category-desc {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .donate-grid {
+        grid-template-columns: 1fr;
+    }
+}
