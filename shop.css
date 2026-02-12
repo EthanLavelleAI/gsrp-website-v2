@@ -231,85 +231,38 @@
     color: #0a0a0a;
 }
 
-/* ===== Ad Grid ===== */
-.ad-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+/* ===== Ad Links ===== */
+.ad-links {
+    display: flex;
     gap: 20px;
-    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.ad-card {
-    display: flex !important;
-    flex-direction: column;
+.ad-link-button {
+    display: inline-flex;
     align-items: center;
-    text-align: center;
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border) !important;
+    justify-content: center;
+    padding: 12px 32px;
+    background: var(--accent);
+    color: #0a0a0a;
     border-radius: var(--radius);
-    padding: 44px 32px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
     transition: var(--transition);
     cursor: pointer;
-    text-decoration: none !important;
-    color: inherit !important;
 }
 
-.ad-card:hover {
-    background: var(--bg-card-hover) !important;
-    border-color: var(--border-hover) !important;
+.ad-link-button:hover {
+    background: #2563eb;
+    text-decoration: none;
     transform: translateY(-2px);
 }
 
-.ad-card:link,
-.ad-card:visited,
-.ad-card:focus,
-.ad-card:active {
-    text-decoration: none !important;
-    color: inherit !important;
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border) !important;
-}
-
-.ad-ping {
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 8px 20px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-}
-
-.ad-ping.everyone {
-    background: rgba(239, 68, 68, 0.12);
-    color: #f87171;
-}
-
-.ad-ping.here {
-    background: rgba(250, 204, 21, 0.12);
-    color: #fbbf24;
-}
-
-.ad-desc {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 20px;
-    max-width: 280px;
-}
-
-.ad-price {
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-    margin-bottom: 24px;
-}
-
-.ad-price .price-amount {
-    font-size: 2rem;
-}
-
-.ad-card .btn {
-    width: 100%;
-    justify-content: center;
+.ad-link-button:visited {
+    color: #0a0a0a;
+    text-decoration: none;
 }
 
 /* ===== Responsive ===== */
@@ -345,16 +298,21 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .ad-grid {
-        grid-template-columns: 1fr;
-    }
-
     .shop-category-title {
         justify-content: center;
     }
 
     .shop-category-desc {
         text-align: center;
+    }
+
+    .ad-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .ad-link-button {
+        width: 100%;
     }
 }
 
